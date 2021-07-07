@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" class="box">
+                    <h1>Login</h1>
+                    <p class="text-muted"> Please enter your login and password!</p> 
+                    <input type="text" name="" placeholder="Username" formControlName="name">
+                    <input type="text" name="" placeholder="UserLastName" formControlName="lastName">
+                    <input type="password" name="" placeholder="Password" formControlName="password">  
+                    
+                    <input type="submit" name="" value="Login" href="#">
+                    <div class="alert alert-secondary" *ngIf="errorStatus">
+                        <p>{{ errorMsj }}</p>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
